@@ -43,7 +43,7 @@ Another file, formatted.md, is the enhanced version of the notes.
 
 ## Built With
 
-* OpenAI API (GPT 4.0 Lite)
+* OpenAI API (GPT 4.0 Mini)
 * Node.js
 
 ## Authors
