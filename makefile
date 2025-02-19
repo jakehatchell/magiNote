@@ -1,5 +1,5 @@
 build:
-	g++ -o magiNote.exe editor.cpp -Wall
+	g++ -o magiNote editor.cpp -Wall
 
 clean:
-	rm magiNote.exe
+	rm magiNote

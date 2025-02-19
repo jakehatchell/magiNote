@@ -19,7 +19,9 @@ const completion = await openai.chat.completions.create({
   store: true,
 });
 
-fs.writeFile('formatted.md', completion.choices[0].message.content, (err) => {
+const path = process.argv[2] + "_formatted.md"
+
+fs.writeFile(path, completion.choices[0].message.content, (err) => {
   if (err) { console.error('Error occurred: ', err); }
 });
 

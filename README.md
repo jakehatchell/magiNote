@@ -34,11 +34,11 @@ g++ -o magiNote editor.cpp -Wall
 Inside the root directory, run the following command:
 
 ```
-./magiNote [session name]
+./magiNote [session_name]
 ```
-Running the program will create 2 files, both saved to the root directory of the repo (better file handling coming soon!).
-The file matching the session name is a text file of the raw inputs from the user, which is saved in case AI enhancement fails.
-Another file, formatted.md, is the enhanced version of the notes.
+Running the program will create 2 files, both saved to the 'notes' directory of the repo.
+The file *session_name* is a text file of the raw inputs from the user, which is saved in case AI enhancement fails or is undesirable.
+Another file, *session_name*_formatted.md, is the enhanced version of the notes.
 
 
 ## Built With
@@ -48,10 +48,5 @@ Another file, formatted.md, is the enhanced version of the notes.
 
 ## Authors
 
-* **Jake Hatchell** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
+* **Jake Hatchell**
 

@@ -3,15 +3,16 @@
 #include <cstdlib>
 #include <string>
 #include <cstring>
+#include <filesystem>
 
 using namespace std;
 
 const string version = "1.0.0";
 
-void userInput(string fileName) {
+string userInput(string fileName) {
+    string path = "./notes/" + fileName;
     ofstream outfile;
-    outfile.open(fileName, std::ios_base::app);
-    bool endLoop = false;
+    outfile.open(path, std::ios_base::app);
     string input;
     
     while (true) {
@@ -26,21 +27,21 @@ void userInput(string fileName) {
         system("clear");
     }
     outfile.close();
+    return path;
 }
 
-void runApp(string fileName) {
+string runApp(string fileName) {
     cout << "Welcome to magiNote version " << version << "\n";
     cout << "Current session open: " << fileName << endl;
     cout << "\nBegin typing notes, line-by-line, and hitting enter between lines." << endl;
-    userInput(fileName);
+    return userInput(fileName);
 }
 
 int main(int argc, char *argv[]) {
     try {
         if (argc != 2)
             throw 0;
-        runApp(argv[1]);
-        string command = "node index.js " + (string)argv[1];
+        string command = "node index.js " + runApp(argv[1]);
         cout << command << endl;
         system(command.c_str());
     }
